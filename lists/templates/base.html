@@ -1,12 +1,17 @@
-<html>
-    <head>
-	<title>Start a new To-Do list</title>
-    </head>
-    <body>
-	  <h1>Your To-Do List</h1>
+<!DOCTYPE html>
+<html lang="en">
+    <title>To-Do lists</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="css/bootstrap.min.css" rel="stylesheet" media="screen">
+    
+</head-->
+<body>
+<div class="container">
+    <h1>{% block header_text %}{% endblock %}</h1>
+</div>
 	  <form method="POST" action="/lists/new">
 	      <input name="item_text" id="id_new_item" placeholder="Enter a to-do item" />
 	      {% csrf_token %}
 	  </form>	  
-    </body>
+</body>
 </html>
