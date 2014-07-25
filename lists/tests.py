@@ -126,4 +126,14 @@ class NewListTest(TestCase):
     )
     self.assertRedirects(response, '/lists/%d/' % (correct_list.id,))
 
+  @classmethod
+  def setUpClass(cls):
+    for arg in sys.arg:
+      cls.server_url = 'http://' + arg.split('=') [1]
+      reutrn #
+  @classmethod
+  def tearDownClass(cls):
+    if cls.server_url == cls.live_server_url:
+      supe().teardownClass()
 
+    
