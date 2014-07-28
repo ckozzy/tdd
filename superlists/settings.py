@@ -23,7 +23,7 @@ SECRET_KEY = 'nk&()i0b5_n#=ossiwbg1896zlz@kvyecjv=++l04c+#h%+b^o'
 
 # SECURITY WARNING: don't run with debug turned on in production!
 
-DEBUG = True
+DEBUG = False
 
 TEMPLATE_DEBUG = DEBUG
 
