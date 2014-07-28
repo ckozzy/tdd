@@ -10,7 +10,9 @@ https://docs.djangoproject.com/en/dev/ref/settings/
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 import os
-BASE_DIR = os.path.dirname(os.path.dirname(__file__))
+
+BASE_DIR = os.path.abspath(os.path.dirname(os.path.dirname(__file__)))
+
 
 
 # Quick-start development settings - unsuitable for production
@@ -22,9 +24,9 @@ SECRET_KEY = 'nk&()i0b5_n#=ossiwbg1896zlz@kvyecjv=++l04c+#h%+b^o'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-TEMPLATE_DEBUG = True
+TEMPLATE_DEBUG = DEBUG
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['ckozzy.com', 'www.ckozzy.com']
 
 
 # Application definition
@@ -82,4 +84,12 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/dev/howto/static-files/
 
 STATIC_URL = '../static/'
-STATIC_ROOT = os.path.join(BASE_DIR, '../static')
+# the following is what I currently have
+# STATIC_ROOT = os.path.join(BASE_DIR, '../static')
+
+# the following was deleted from gh repo
+STATIC_ROOT = os.path.abspath(os.path.join(BASE_DIR, '../static'))
+#the following was added in the repo
+#STATIC_ROOT = os.path.join(BASE_DIR, '../static')
+
+
