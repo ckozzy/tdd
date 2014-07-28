@@ -83,13 +83,13 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/dev/howto/static-files/
 
-STATIC_URL = '../static/'
-# the following is what I currently have
-# STATIC_ROOT = os.path.join(BASE_DIR, '../static')
+STATIC_URL = '/static/'
 
-# the following was deleted from gh repo
-STATIC_ROOT = os.path.abspath(os.path.join(BASE_DIR, '../static'))
-#the following was added in the repo
-#STATIC_ROOT = os.path.join(BASE_DIR, '../static')
+STATIC_ROOT = os.path.join(BASE_DIR, '../static')
+#STATIC_ROOT = 'var/www/static'
 
+STATICFILES_DIRS = (
+      os.path.join(BASE_DIR, "static"),
+      '/var/www/static/',
+)
 
