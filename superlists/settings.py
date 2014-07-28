@@ -22,6 +22,7 @@ BASE_DIR = os.path.abspath(os.path.dirname(os.path.dirname(__file__)))
 SECRET_KEY = 'nk&()i0b5_n#=ossiwbg1896zlz@kvyecjv=++l04c+#h%+b^o'
 
 # SECURITY WARNING: don't run with debug turned on in production!
+
 DEBUG = True
 
 TEMPLATE_DEBUG = DEBUG
@@ -32,7 +33,7 @@ ALLOWED_HOSTS = ['ckozzy.com', 'www.ckozzy.com']
 # Application definition
 
 INSTALLED_APPS = (
-    'django.contrib.admin',
+    #'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
     'django.contrib.sessions',
@@ -89,7 +90,7 @@ STATIC_ROOT = os.path.join(BASE_DIR, '../static')
 #STATIC_ROOT = 'var/www/static'
 
 STATICFILES_DIRS = (
-      os.path.join(BASE_DIR, "static"),
-      '/var/www/static/',
+      os.path.join(BASE_DIR, "static"),  
+      
 )
 
