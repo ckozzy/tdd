@@ -183,14 +183,14 @@ class ListAndItemModelsTest(TestCase):
         self.assertEqual(second_saved_item.text, 'Item the second')
         self.assertEqual(second_saved_item.list, list_)
 
-  @classmethod
-  def setUpClass(cls):
-    for arg in sys.arg:
-      cls.server_url = 'http://' + arg.split('=') [1]
-      reutrn #
-  @classmethod
-  def tearDownClass(cls):
-    if cls.server_url == cls.live_server_url:
-      supe().teardownClass()
+    #@classmethod
+    #def setUpClass(cls):
+        #for arg in sys.arg:
+            #cls.server_url = 'http://' + arg.split('=') [1]
+      #reutrn #
+  #@classmethod
+  #def tearDownClass(cls):
+    #if cls.server_url == cls.live_server_url:
+      #supe().teardownClass()
 
     
