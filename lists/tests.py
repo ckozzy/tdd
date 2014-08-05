@@ -5,7 +5,7 @@ from django.template.loader import render_to_string
 #from lists.models import Item, List
 from lists.models import Item, List
 from lists.views import home_page
-import sys
+
 
 class HomePageTest(TestCase):
   
@@ -183,14 +183,14 @@ class ListAndItemModelsTest(TestCase):
         self.assertEqual(second_saved_item.text, 'Item the second')
         self.assertEqual(second_saved_item.list, list_)
 
-    #@classmethod
-    #def setUpClass(cls):
-      #for arg in sys.arg:
-        #cls.server_url = 'http://' + arg.split('=') [1]
-        #reutrn #
-    #@classmethod
-    #def tearDownClass(cls):
-      #if cls.server_url == cls.live_server_url:
-        #super().teardownClass()
+  @classmethod
+  def setUpClass(cls):
+    for arg in sys.arg:
+      cls.server_url = 'http://' + arg.split('=') [1]
+      reutrn #
+  @classmethod
+  def tearDownClass(cls):
+    if cls.server_url == cls.live_server_url:
+      supe().teardownClass()
 
     
